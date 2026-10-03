@@ -1,0 +1,147 @@
+{
+  "theme": "light",
+  "archetype": "Jewel & Luxury (Patriotic Red & Gold)",
+  "description": "A modern, elegant, and professional educational mobile app featuring an Indonesian nationalistic color palette (Red, White, Gold). Designed for students, prioritizing high legibility, respectful presentation of historical figures, and intuitive navigation.",
+  "typography": {
+    "font_family_headings": "Playfair Display",
+    "font_family_body": "Plus Jakarta Sans",
+    "weights": {
+      "light": 300,
+      "regular": 400,
+      "medium": 500,
+      "bold": 700,
+      "black": 900
+    },
+    "sizes": {
+      "h1": "32px",
+      "h2": "28px",
+      "h3": "24px",
+      "h4": "20px",
+      "body_large": "18px",
+      "body": "16px",
+      "small": "14px",
+      "tiny": "12px"
+    }
+  },
+  "colors": {
+    "primary": "#CE1126",
+    "primary_active": "#A60D1D",
+    "primary_foreground": "#FFFFFF",
+    "secondary": "#D4AF37",
+    "secondary_active": "#B8860B",
+    "secondary_foreground": "#1A1A1A",
+    "background": "#FFFFFF",
+    "background_alt": "#F8F9FA",
+    "surface": "#FFFFFF",
+    "surface_variant": "#F1F3F5",
+    "text_main": "#121212",
+    "text_muted": "#6A6A6A",
+    "border": "#E5E5E5",
+    "error": "#E63946",
+    "success": "#2A9D8F",
+    "overlay": "rgba(0, 0, 0, 0.5)"
+  },
+  "spacing_and_layout": {
+    "screen_padding": 16,
+    "card_padding": 20,
+    "gap_small": 8,
+    "gap_medium": 16,
+    "gap_large": 24,
+    "border_radius": {
+      "small": 8,
+      "medium": 16,
+      "large": 24,
+      "pill": 9999
+    },
+    "shadows": {
+      "sm": "0px 2px 4px rgba(0, 0, 0, 0.05)",
+      "md": "0px 4px 8px rgba(0, 0, 0, 0.1)",
+      "lg": "0px 8px 16px rgba(0, 0, 0, 0.15)"
+    }
+  },
+  "icons": {
+    "library": "lucide-react-native",
+    "style": "clean, slightly rounded, 24px default size, gold or red for active states"
+  },
+  "components": {
+    "MainMenuGrid": {
+      "layout": "Bento grid layout. The 'Mulai Scan AR' button should be full-width on top to emphasize the core feature, followed by 2x2 grid for Daftar Pahlawan, Kuis, Panduan, Tentang.",
+      "card_style": "White background, medium border radius (16px), md shadow. Icons in gold or red.",
+      "text_style": "Plus Jakarta Sans, bold, text-main."
+    },
+    "ProgressTracker": {
+      "layout": "Horizontal progress bar below the user's greeting.",
+      "style": "Gold (#D4AF37) fill on a light gray track. Text showing 'X/20 Pahlawan Dipelajari'."
+    },
+    "ARViewerOverlay": {
+      "layout": "Absolute positioned over camera view. Use safe area insets.",
+      "controls": "Glassmorphism pills or semi-transparent dark backgrounds (rgba(0,0,0,0.6)) to ensure visibility over the live camera.",
+      "typography": "White text, high contrast."
+    },
+    "HeroBiographyView": {
+      "header_image": "Full width, max height 40vh, slight gradient overlay at bottom for text contrast.",
+      "content_container": "White surface, border-top-radius 24px, negative margin top (-20) to overlap image. Contains Name, Title, Birthdate, and detailed history.",
+      "title": "Playfair Display, h2, text-main.",
+      "audio_button": "Floating Action Button (FAB) or prominent inline button, secondary color (Gold) background, with a Speaker icon for TTS."
+    },
+    "HeroCard": {
+      "layout": "Vertical column. Image 60%, content 40%.",
+      "image": "Cover fit. border-top-radius 16px.",
+      "title": "Playfair Display, text-center, bold.",
+      "status": "Small checkmark icon in green (#2A9D8F) if already studied."
+    },
+    "QuizView": {
+      "card": "White surface, generous padding.",
+      "question_text": "Plus Jakarta Sans, large, bold.",
+      "option_button": "Outlined button default. On select: green for correct, red for incorrect, with slight shake animation on incorrect.",
+      "score_modal": "Gold medal icon, large score text, primary button to 'Ulangi Kuis' (Retry)."
+    },
+    "PrimaryButton": {
+      "background": "primary (#CE1126)",
+      "text": "primary_foreground (#FFFFFF)",
+      "radius": "pill",
+      "interaction": "Opacity reduction on press."
+    }
+  },
+  "interactions_and_animations": {
+    "page_transition": "Slide in from right, fade out.",
+    "list_items": "Staggered fade in and slide up (use React Native Reanimated or standard LayoutAnimation).",
+    "button_press": "Scale down to 0.95 or opacity 0.8."
+  },
+  "media": {
+    "backgrounds": {
+      "splash_screen": "https://images.unsplash.com/photo-1683884344837-056f4a040299?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwxfHxpbmRvbmVzaWElMjBmbGFnJTIwcmVkJTIwd2hpdGV8ZW58MHx8fHwxNzc3NTU1NDkzfDA&ixlib=rb-4.1.0&q=85",
+      "app_pattern": "https://images.unsplash.com/photo-1761516659539-20ec6f407ca4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTV8MHwxfHNlYXJjaHwxfHxpbmRvbmVzaWElMjBiYXRpayUyMHBhdHRlcm58ZW58MHx8fHwxNzc3NTU1NDk5fDA&ixlib=rb-4.1.0&q=85"
+    },
+    "icons": {
+      "quiz_medal": "https://images.unsplash.com/photo-1760996888745-a878ad8779df?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHwxfHxnb2xkJTIwbWVkYWwlMjByaWJib258ZW58MHx8fHwxNzc3NTU1NDk5fDA&ixlib=rb-4.1.0&q=85"
+    },
+    "hero_portraits": {
+      "pangeran_diponegoro": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Diponegoro_by_Sudjono_Abdullah.jpg",
+      "jenderal_soedirman": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Sudirman.jpg",
+      "ra_kartini": "https://upload.wikimedia.org/wikipedia/commons/7/7b/RA_Kartini.jpg",
+      "soekarno": "https://upload.wikimedia.org/wikipedia/commons/0/01/Presiden_Sukarno.jpg",
+      "mohammad_hatta": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Vice_President_Hatta.jpg"
+    }
+  },
+  "testing_attributes": {
+    "requirement": "All interactive and key informational elements MUST include a `testID` attribute.",
+    "convention": "kebab-case, role-based.",
+    "examples": [
+      "testID=\"main-menu-scan-button\"",
+      "testID=\"hero-list-item-diponegoro\"",
+      "testID=\"quiz-option-a-button\"",
+      "testID=\"play-audio-narration-button\""
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Use expo-router for file-based navigation.",
+    "Implement UI using pure React Native components (View, Text, TouchableOpacity, Image) or styling libraries like NativeWind/Tailwind if configured. Do not use HTML tags.",
+    "For typography, use expo-font to load 'Playfair Display' (serif, used for all headings/titles) and 'Plus Jakarta Sans' (sans-serif, used for all body text).",
+    "Ensure the AR Viewer supports permission requests for the Camera and maps overlay components correctly on top of it.",
+    "Use standard lucide-react-native icons.",
+    "Ensure accessibility: sufficient contrast (Red on White is good, use dark gray instead of pure black for softer reading).",
+    "Use ScrollView for long content like biographies and ensure padding bottoms so content isn't cut off.",
+    "Add `testID` to all touchable elements for automated testing."
+  ]
+}
