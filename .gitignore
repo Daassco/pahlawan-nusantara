@@ -88,3 +88,7 @@ credentials.json
 *.pem
 *.key
 .credentials
+
+# Expo / React Native cache
+.expo/
+.metro-cache/
